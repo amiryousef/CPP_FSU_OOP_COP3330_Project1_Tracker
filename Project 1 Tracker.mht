@@ -1,0 +1,793 @@
+From: "Saved by Windows Internet Explorer 8"
+Subject: Project 1: Tracker
+Date: Mon, 31 Oct 2011 14:13:50 -0400
+MIME-Version: 1.0
+Content-Type: multipart/related;
+	type="text/html";
+	boundary="----=_NextPart_000_0000_01CC97D7.4FD84C80"
+X-MimeOLE: Produced By Microsoft MimeOLE V6.0.6002.18463
+
+This is a multi-part message in MIME format.
+
+------=_NextPart_000_0000_01CC97D7.4FD84C80
+Content-Type: text/html;
+	charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cs.fsu.edu/~lacher/courses/COP3330/assigns/proj1.html
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML><HEAD><TITLE>Project 1: Tracker</TITLE>
+<META content=3D"text/html; charset=3Dwindows-1252" =
+http-equiv=3DContent-Type>
+<META name=3DGENERATOR content=3D"MSHTML 8.00.6001.19154">
+<STYLE type=3Dtext/css>@import url( =
+http://www.cs.fsu.edu/~lacher/styles/RCLstyle1.css );
+</STYLE>
+</HEAD>
+<BODY aLink=3D#808080 link=3Dblack vLink=3Dblack><!--=0A=
+<center>=0A=
+<h1><font color=3D#990000>DRAFT: Open for comment in the discussion =
+forum.</font></h1>=0A=
+</center>=0A=
+--><!--=0A=
+<center>=0A=
+<h1><font color=3D#990000>Official Release: Open for comment in the =
+discussion forum.</font></h1>=0A=
+</center>=0A=
+--><!--=0A=
+<center>=0A=
+<h1><font color=3D"green">=0A=
+This project is now released and the comment period is closed.<br>Any =
+further=0A=
+modifications of this document will be announced in the discussion forum.=0A=
+</font></h1>=0A=
+</center>=0A=
+-->
+<CENTER>
+<H1>Project 1: Tracker</H1></CENTER>
+<CENTER>
+<TABLE border=3D2 cellSpacing=3D0 borderColor=3D#990000 cellPadding=3D4 =
+width=3D"90%">
+  <TBODY>
+  <TR>
+    <TD>
+      <P><STRONG>Note:</STRONG> This assignment is used to assess the =
+required=20
+      outcomes for the course, as outlined in the course syllabus. These =
+
+      outcomes are: </P>
+      <OL type=3Di>
+        <LI>use of arrays and pointers in the solution of programming =
+problems=20
+        using C++=20
+        <LI>create and use classes within the C++ programming language=20
+        <LI>create, compile, and execute C++ programs within the Unix=20
+        environment, using the Object-Oriented design model=20
+        <LI>program using C++ techniques: composition of objects, =
+operator=20
+        overloads, dynamic memory allocation, inheritance and =
+polymorphism, and=20
+        file I/O=20
+        <LI>program using C++ techniques: composition of objects, =
+templates,=20
+        preprocessor directives, and basic data structures. </LI></OL>
+      <P>These will be assessed using the following rubric: </P>
+      <BLOCKQUOTE>
+        <TABLE border=3D2 cellSpacing=3D0 cellpading=3D"4">
+          <TBODY>
+          <TR>
+            <TD colSpan=3D2>Rubric for Outcomes i.-iv. </TD>
+            <TD>I </TD>
+            <TD>E </TD>
+            <TD>H </TD>
+            <TD vAlign=3Dtop rowSpan=3D7>&nbsp;<BR>Key:<BR>&nbsp; I =3D=20
+              ineffective<BR>&nbsp; E =3D effective<BR>&nbsp; H =3D =
+highly=20
+            effective</TD></TR>
+          <TR>
+            <TD align=3Dright>i.</TD>
+            <TD>Use Arrays and Pointers </TD>
+            <TD>-</TD>
+            <TD>-</TD>
+            <TD>-</TD></TR>
+          <TR>
+            <TD align=3Dright>ii.</TD>
+            <TD>Use Classes and Objects </TD>
+            <TD>-</TD>
+            <TD>-</TD>
+            <TD>-</TD></TR>
+          <TR>
+            <TD align=3Dright>iii.</TD>
+            <TD>OO Programming Techniques </TD>
+            <TD>-</TD>
+            <TD>-</TD>
+            <TD>-</TD></TR>
+          <TR>
+            <TD align=3Dright>iv.</TD>
+            <TD>Inheritance and Polymorphism </TD>
+            <TD>-</TD>
+            <TD>-</TD>
+            <TD>-</TD></TR></TBODY></TABLE></BLOCKQUOTE>
+      <P>In order to earn a course grade of C- or better, the assessment =
+must=20
+      result in Effective or Highly Effective for each outcome.=20
+  </P></TD></TR></TBODY></TABLE></CENTER>
+<P><B>Educational Objectives:</B> After completing this assignment the =
+student=20
+should have the following knowledge, ability, and skills:</P>
+<UL>
+  <LI>Define a class hierarchy using inheritance=20
+  <LI>Define a class hierarchy using multiple inheritance=20
+  <LI>Define virtual member functions in a class hierarchy=20
+  <LI>Implement a class hierarchy using inheritance=20
+  <LI>Implement a class hierarchy using multiple inheritance=20
+  <LI>Implement virtual member functions in a class hierarchy=20
+  <LI>Use initialization lists to call parent class constructors for =
+derived=20
+  class constructors=20
+  <LI>State the call sequence for constructors in an inheritance chain=20
+  <LI>State the call sequence for destructors in an inheritance chain=20
+  <LI>Define static (compile time) polymorphism=20
+  <LI>Define dynamic (run time) polymorphism=20
+  <LI>Use a class hierarchy to implement dynamic polymorphism </LI></UL>
+<P><STRONG>Operational Objectives:</STRONG> Create (define and =
+implement)=20
+classes <TT>Box</TT>, <TT>Cylinder</TT>, <TT>Plane</TT>, =
+<TT>Vehicle</TT>,=20
+<TT>Car</TT>, <TT>Truck</TT>, <TT>Van</TT>, <TT>Tanker</TT>, and=20
+<TT>Flatbed</TT> and an object-oriented vehicle counter for use by the=20
+Department of Transportation (DOT). </P>
+<P><STRONG>Deliverables:</STRONG> Seven (7) files: <TT>vehicles.h</TT>,=20
+<TT>vehicles.cpp</TT>, <TT>shapes.h</TT>, <TT>shapes.cpp</TT>,=20
+<TT>verbose.cpp</TT>, <TT>tracker.cpp</TT>, and <TT>makefile</TT>. </P>
+<H2>The DOT Tracker Project</H2>
+<P>This project simulates an application called <EM>tracker</EM> for the =
+
+Department of Transportation (DOT) in which highway traffic data is =
+accumulated=20
+in real time using various sensing equipment. The sensors can passively =
+detect a=20
+vehicle and actively inquire further data when that vehicle is a truck. =
+For all=20
+vehicles a serial number is collected. The serial number can be decoded =
+to=20
+determine the vehicle type (car, truck/van, truck/tanker, =
+truck/flatbed),=20
+passenger capacity, and, for trucks, the dimensions of its carrier. =
+Trucks=20
+actively respond with their DOT license number as well. </P>
+<P>Tracker is set up at a specific point on a roadway, for example at a =
+toll=20
+booth or a specific segment of interstate highway. Once activated, it =
+keeps a=20
+running account of the passing vehicles. It can report summary data and =
+also can=20
+keep full reports of all vehicles passing the checkpoint within a =
+certain time=20
+block.=20
+<H2>Procedural Requirements</H2>
+<OL type=3D1>
+  <LI>
+  <P>Create and work within a separate subdirectory =
+<TT>cop3330/proj1</TT>.=20
+  Review the COP 3330 rules found in Introduction/Work Rules. </P>
+  <LI>
+  <P>Begin by copying the following files from the course directory: =
+into your=20
+  <TT>proj1</TT> directory: </P>
+  <BLOCKQUOTE><PRE>proj1/tester.cpp
+proj1/segment0.data
+proj1/segment1.data
+proj1/segment2.data
+proj1/proj1submit.sh
+area51/tester_s.x
+area51/tester_i.x
+area51/tester-bad_i.x
+area51/tracker_s.x
+area51/tracker_i.x
+</PRE></BLOCKQUOTE>
+  <P>The naming of these files uses the convention that <TT>_s</TT> and=20
+  <TT>_i</TT> are compiled from the same cource code on <TT>program</TT> =
+
+  (Sun/Solaris) and <TT>linprog</TT> (Intel/Linux), respectively. The=20
+  executables are distributed only for your information and =
+experimentation. You=20
+  will not use these files in your own project. </P>
+  <LI>
+  <P>You are to define and implement the following classes: =
+<TT>Box</TT>,=20
+  <TT>Cylinder</TT>, <TT>Plane</TT>, <TT>Vehicle</TT>, <TT>Car</TT>,=20
+  <TT>Truck</TT>, <TT>Van</TT>, <TT>Tanker</TT>, and <TT>Flatbed</TT>. =
+</P>
+  <LI>
+  <P>File <TT>shapes.h</TT> should contain the definitions of the =
+classes=20
+  <TT>Box</TT>, <TT>Cylinder</TT>, and <TT>Plane</TT>. File =
+<TT>shapes.cpp</TT>=20
+  should contain the member function implementations for these classes. =
+</P>
+  <LI>
+  <P>File <TT>vehicles.h</TT> should contain the definitions of the =
+classes=20
+  <TT>Vehicle</TT>, <TT>Car</TT>, <TT>Truck</TT>, <TT>Van</TT>, =
+<TT>Tanker</TT>,=20
+  and <TT>Flatbed</TT>. File <TT>vehicles.cpp</TT> should contain the=20
+  implementations for these classes. </P>
+  <LI>
+  <P>File <TT>verbose.cpp</TT> should contain the verbose versions of =
+the=20
+  various class implementations (both shapes and vehicles).</P>
+  <LI>
+  <P>Create a client program for all of these classes in the file=20
+  <TT>tracker.cpp</TT>. </P>
+  <LI>
+  <P>Create a makefile for all of the project in the file =
+<TT>makefile</TT>.=20
+</P>
+  <LI>
+  <P>Turn in all seven (7) files <TT>vehicles.h</TT>, =
+<TT>vehicles.cpp</TT>,=20
+  <TT>shapes.h</TT>, <TT>shapes.cpp</TT>, <TT>verbose.cpp</TT>,=20
+  <TT>tracker.cpp</TT>, and <TT>makefile</TT> using the =
+<TT>proj1submit.sh</TT>=20
+  submit script. </P>
+  <P><EM><B>Warning:</B> Submit scripts do not work on the =
+<TT>program</TT> and=20
+  <TT>linprog</TT> servers. Use <TT>shell.cs.fsu.edu</TT> to submit =
+projects. If=20
+  you do not receive the second confirmation with the contents of your =
+project,=20
+  there has been a malfunction.</EM> </P></LI></OL>
+<H2>Code Requirements and Specifications - Server Side</H2>
+<OL type=3D1>
+  <LI>
+  <P>You are to define and implement the following classes:</P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class Name:</EM></TD>
+      <TD><PRE>  Box</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  float Volume() const // returns volume of box object =20
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Private variables:</EM></TD>
+      <TD><PRE>  float length_, width_, =
+height_</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class Name:</EM></TD>
+      <TD><PRE>  Cylinder</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  float Volume() const // returns volume of cylinder =
+object =20
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Private variables:</EM></TD>
+      <TD><PRE>  float length_, =
+radius_</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class Name:</EM></TD>
+      <TD><PRE>  Plane</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  float Area() const // returns area of plane object =20
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Private variables:</EM></TD>
+      <TD><PRE>  float length_, =
+width_</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class Name:</EM></TD>
+      <TD><PRE>  Vehicle</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  const char*           SerialNumber       () const // =
+returns serial number=20
+  unsigned int          PassengerCapacity  () const // returns passenger =
+capacity=20
+  float                 LoadCapacity       () const // returns 0
+  const char*           ShortName          () const // returns "UNK"
+  static  VehicleType   SnDecode           (const char* sn)
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Private variables:</EM></TD>
+      <TD><PRE>  char*        serialNumber_;
+  unsigned int passengerCapacity_;
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class name:</EM></TD>
+      <TD><PRE>  Car
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Inherits from:</EM></TD>
+      <TD><PRE>  Vehicle
+</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  const char* ShortName() const // returns "CAR" =20
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class name:</EM></TD>
+      <TD><PRE>  Truck
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Inherits from:</EM></TD>
+      <TD><PRE>  Vehicle =20
+</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  const char*   ShortName          () const  // returns =
+"TRK"
+  const char*   DOTLicense         () const  // returns the license no =20
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Private variables:</EM></TD>
+      <TD><PRE>  char* DOTLicense_;=20
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class name:</EM></TD>
+      <TD><PRE>  Van
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Inherits from:</EM></TD>
+      <TD><PRE>  Truck , Box =20
+</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  float         LoadCapacity       () const  // returns =
+volume of box =20
+  const char*   ShortName          () const  // returns "VAN"
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class name:</EM></TD>
+      <TD><PRE>  Tanker
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Inherits from:</EM></TD>
+      <TD><PRE>  Truck , Cylinder =20
+</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  float         LoadCapacity       () const  // returns =
+volume of cylinder =20
+  const char*   ShortName          () const  // returns "TNK"
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Class name:</EM></TD>
+      <TD><PRE>  Flatbed
+</PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Inherits from:</EM></TD>
+      <TD><PRE>  Truck , Plane =20
+</PRE></TD></TR>
+    <TR>
+      <TD=20
+        =
+vAlign=3Dtop><EM>Services&nbsp;(added&nbsp;or&nbsp;changed):</EM>&nbsp;=20
+</TD>
+      <TD><PRE>  float         LoadCapacity       () const  // returns =
+area of plane =20
+  const char*   ShortName          () const  // returns "FLT" =20
+</PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <LI>
+  <P>Each class should have the following:=20
+  <OL type=3Di>
+    <LI>Default constructor=20
+    <LI>Parametrized constructor that initializes the class variables=20
+    <LI>Destructor=20
+    <LI>Private copy constructor prototype=20
+    <LI>Private assignment operator prototype=20
+    <LI>Follow the notation conventions:=20
+    <OL type=3Da>
+      <LI>Compound names use uppercase letters to separate words=20
+      <TT>likeThis</TT> or <TT>LikeThis</TT>=20
+      <LI>Class, method, and function names begin with upper case =
+letters=20
+      <TT>LikeThis</TT>=20
+      <LI>Object and variable names names begin with lower case letters=20
+      <TT>likeThis</TT>=20
+      <LI>Class member variables end with underscore <TT>likeThis_</TT> =
+</LI></OL>
+    <P></P></LI></OL>
+  <LI>
+  <P>Be sure to make exactly the methods virtual that are needed - that =
+is,=20
+  those that are overridden in derived classes. Do not make a method =
+virtual=20
+  unless it is needed virtual.</P>
+  <LI>
+  <P>During development and testing of the classes, each constructor and =
+
+  destructor should include a line of code that sends an identifying =
+message to=20
+  standard output. (This requirement serves as a code testing device. =
+These=20
+  identifying output statements will be removed after development. But =
+leave=20
+  them in <TT>verbose.cpp</TT> when you submit!) For example, the =
+<TT>Van</TT>=20
+  destructor should output the message "<TT>~Van()</TT>". </P>
+  <LI>
+  <P>The user-defined type <TT>VehicleType</TT> is an enumerated type: =
+</P>
+  <P>
+  <TABLE border=3D4 cellSpacing=3D0>
+    <TBODY>
+    <TR>
+      <TD vAlign=3Dtop><EM>Type name:</EM></TD>
+      <TD><PRE>  VehicleType
+</TT></PRE></TD></TR>
+    <TR>
+      <TD vAlign=3Dtop><EM>Enumerated values:</EM></TD>
+      <TD><PRE>  badSn, vehicle, car, truck, van, tanker, flatbed =20
+</TT></PRE></TD></TR></TBODY></TABLE></TD></TR></TABLE></P>
+  <LI>
+  <P>The static method <TT>VehicleType Vehicle::SnDecode(const char* =
+sn)</TT>=20
+  returns the vehicle type based on the first (index 0) character of the =
+serial=20
+  number <TT>sn</TT> according to this table:=20
+  <BLOCKQUOTE><PRE>      sn[0]: 0        1        2        3        4    =
+    5        6
+VehicleType: badSn    vehicle  car      truck    van      tanker   =
+flatbed =20
+</PRE></BLOCKQUOTE>
+  <P></P>
+  <LI>
+  <P>After your classes have been fully developed and debugged, so they =
+compile=20
+  without warnings using the commands <TT>g++ -c -I. -Wall -Wextra=20
+  shapes.cpp</TT> and <TT>g++ -c -I. -Wall -Wextra vehicles.cpp</TT>, it =
+is time=20
+  to test with <TT>tester.cpp</TT>:=20
+  <OL type=3Di>
+    <LI>Concatenate the files <TT>shapes.cpp</TT> and =
+<TT>vehicles.cpp</TT> into=20
+    the file <TT>verbose.cpp</TT> [command: <TT>cat shapes.cpp =
+vehicles.cpp &gt;=20
+    verbose.cpp</TT>]. Add file documentation to <TT>verbose.cpp</TT> as =
+usual.=20
+    <LI><TT>#include</TT> <TT>shapes.h</TT> and <TT>vehicles.h</TT> into =
+
+    <TT>verbose.cpp</TT>, between your file documentation and the =
+beginning of=20
+    the code.=20
+    <LI>Make sure that <TT>verbose.cpp</TT> compiles to object code with =
+our=20
+    usual compile command <TT>g++ -c -Wall -Wextra -I. verbose.cpp</TT>. =
+
+    <LI>Now compile the executable program <TT>tester.x</TT> with this =
+command:=20
+    <TT>g++ -otester.x -I. tester.cpp</TT>=20
+    <LI>Thoroughly test your vehicle objects with this program. Note =
+that this=20
+    program prompts you for a serial number. The serial number is =
+decoded to get=20
+    a vehicle type, and an object of that type is created dynamically. =
+You=20
+    should see the constructor calls displayed, in correct order, =
+because tester=20
+    uses the verbose versions of your classes. Then the methods of this =
+object=20
+    are called. You should see correct serial number (and, for trucks, =
+dot=20
+    license) displayed. An "OOPS" message will be displayed if a problem =
+is=20
+    detected with your constructors. Finally the object is deleted, and =
+you=20
+    should see the destructors called in correct order. Read the source =
+code in=20
+    <TT>tester.cpp</TT> both to understand how it works and also for =
+hints on=20
+    how to do certain things in <TT>tracker.cpp</TT>. </LI></OL>
+  <LI>
+  <P>After you have developed and thoroughly tested your Vehicles =
+classes as=20
+  above, it is time to prepare your classes for Tracker:=20
+  <OL type=3Di>
+    <LI>Comment out the verbose output statements in the constructors =
+and=20
+    destructors in <TT>shapes.cpp</TT> and <TT>vehicles.cpp</TT>, but =
+leave them=20
+    in <TT>verbose.cpp</TT>=20
+    <LI>We are now ready to proceed to client side development. =
+</LI></OL>
+  <P></P></LI></OL>
+<H2>Code Requirements and Specifications - Client Side</H2>
+<OL type=3D1>
+  <LI>
+  <P>You are to implement a client program <TT>tracker</TT> of the =
+vehicle=20
+  system described above.</P>
+  <LI>
+  <P>Tracker processes data from a file that is input through =
+redirection and=20
+  sends results to standard output. (Thus tracker does not deal directly =
+with=20
+  files but reads from and writes to standard I/O.) </P>
+  <LI>
+  <P>Tracker goes through the following processing loop:=20
+  <OL type=3D1>
+    <LI>Read the number of vehicles in the next segment=20
+    <LI>If the number is zero, exit=20
+    <LI>For each vehicle in the segment,=20
+    <OL type=3D1>
+      <LI>Decode the vehicle serial number=20
+      <LI>If other data is needed, read that data=20
+      <LI>Create a vehicle of the appropriate type using the data read =
+in the=20
+      previous steps=20
+      <LI>Update various summary information for this segment </LI></OL>
+    <LI>After all the vehicles in the segment have been read and their=20
+    corresponding objects created, report a summary of the various =
+vehicles by=20
+    type, along with the total tonnage of the segment.=20
+    <LI>After the summary, report the details: for each vehicle in the =
+segment:=20
+    <OL type=3D1>
+      <LI>Report the vehicle data to screen=20
+      <LI>Release the memory used to store the vehicle =
+</LI></OL></LI></OL>When in=20
+  doubt, use the distributed executables as a guide to output data and=20
+  formatting.=20
+  <P></P>
+  <LI>
+  <P>Note that the tracker processing loop continues until zero is read =
+for a=20
+  segment size. It may be assumed that the file of data is correctly =
+structured=20
+  so that whenever an appropriate item is expected, it is next in the =
+file. For=20
+  all vehicles, the data will begin with the serial number <TT>sn</TT> =
+and then=20
+  give the passenger capacity <TT>pc</TT>. For all specific truck types, =
+the=20
+  next entry will be the DOTlicense <TT>DOTL</TT> followed by the =
+dimension data=20
+  <TT>d1 d2 d3(optional)</TT>. For example, a car, truck, van, tanker, =
+and=20
+  flatbed would have these lines of data: </P>
+  <BLOCKQUOTE><PRE>sn pc
+sn pc DOTL
+sn pc DOTL d1 d2 d3
+sn pc DOTL d1 d2
+sn pc DOTL d1 d2
+</PRE></BLOCKQUOTE>
+  <P>The dimensional data should be interpreted in the order <I>d1 =3D =
+length</I>,=20
+  <I>d2 =3D width</I> or <I>radius</I>, <I>d3 =3D height</I>. Note that =
+this is more=20
+  or less self-documenting in the data file <TT>segment0.data</TT>. =
+<EM>Note=20
+  also that we will assume that each vehicle and its data are in a =
+separate line=20
+  of the input file.</EM> </P>
+  <LI>
+  <P>Tracker should instantiate the objects of a segment using an array =
+whose=20
+  elements are of type <TT>Vehicle *</TT>, that is, pointer to type=20
+  <TT>Vehicle</TT>. At the end of reading the segment data, this array =
+should=20
+  have pointers to vehicle objects representing the entire segment. =
+These=20
+  objects should exist until the line in the report representing the =
+object is=20
+  generated. </P>
+  <LI>
+  <P>Use declared constants (not hardcoded literal values) for the =
+following:=20
+  <OL type=3Di>
+    <LI>The maximum number of vehicles in a traffic segment (100)=20
+    <LI>The maximum number of characters in a vehicle serial number (20) =
+
+    <LI>The maximum number of characters in a truck DOT license (20) =
+</LI></OL>
+  <P></P>
+  <LI>
+  <P>Check for a segment size greater than tracker can handle, and exit =
+if that=20
+  happens. Thus tracker would exit if either size 0 is read or some size =
+greater=20
+  than the declared constant 6.i above. </P>
+  <LI>
+  <P>Your <TT>tracker.cpp</TT> source file should <TT>#include=20
+  &lt;vehicles.h&gt;</TT>, but <I>not</I> any of the other project =
+files. Your=20
+  <TT>makefile</TT> should create separate object files =
+<TT>vehicles.o</TT>,=20
+  <TT>shapes.o</TT> , and <TT>tracker.o</TT> and then create the =
+executable=20
+  <TT>tracker.x</TT>. </P>
+  <LI>
+  <P>Do not submit "verbose" classes for tracker.</P></LI></OL>
+<H2>Hints</H2>
+<UL>
+  <LI>
+  <P>Model executables <TT>tester.x</TT> and <TT>tracker.x</TT> are for =
+your=20
+  information only - they are not needed for your project. However,=20
+  <TT>tester.cpp</TT> is indispensable: This is one of the test programs =
+that=20
+  will be used to assess your project. Moreover, it will help you debug =
+your=20
+  classes and gives some example code that can serve as a model for your =
+client=20
+  <TT>tracker</TT> program. </P>
+  <LI>
+  <P>To execute tester, enter a serial number at the prompt. The first =
+digit=20
+  determines the vehicle type. Tester uses the verbose implementations, =
+so you=20
+  should see all of the constructor and destructor calls for the =
+selected type.=20
+  </P>
+  <LI>
+  <P>To execute tracker on a data file use redirection. For example,=20
+  enter<BR><TT>&nbsp;&nbsp;prompt&gt; <FONT color=3D#990000>tracker.x =
+&lt;=20
+  segment2.data</FONT></TT><BR>to run <TT>tracker.x</TT> with the data =
+file=20
+  <TT>segment2.data</TT> as input. </P>
+  <LI>
+  <P>All destructors should be declared <TT>virtual</TT>. <EM>Be sure =
+you=20
+  understand why. There will likely be an exam question related to =
+this.</EM>=20
+  </P>
+  <LI>
+  <P>It is wise to develop and test all of the classes prior to working =
+on any=20
+  code for <TT>tracker.cpp</TT>. This way you can concentrate on class=20
+  development - some call this "wearing your server hat". <EM>After</EM> =
+you are=20
+  satisfied that your classes are correct and ready for submission, =
+including=20
+  all documentation etc, only then do you switch to your "client" hat =
+and start=20
+  working on <TT>tracker</TT>. </P>
+  <P>If you were starting from "scratch", you would first write a test =
+harness=20
+  like <TT>tester.cpp</TT> that exercises your classes and allows you to =
+debug=20
+  them as a system. </P>
+  <LI>
+  <P>The program <TT>tester.cpp</TT> is central to your effort in =
+several ways:=20
+  <OL type=3Di>
+    <LI>It allows you to debug your classes, prior to even thinking =
+about=20
+    <TT>tracker</TT>. This way, you are wearing your "server" hat while =
+classes=20
+    are being created. (One exception: memory management issues may not =
+be=20
+    exposed by tester.)=20
+    <LI>After the classes are debugged and working correctly, you change =
+to your=20
+    "client" hat and start working on the <TT>tracker</TT> program. The =
+file=20
+    <TT>tester.cpp</TT> has model code that you should understand in =
+every=20
+    detail and use as a model for your <TT>tracker</TT> code.=20
+    <LI><EM>Note: you will likely see code similar to <TT>tester</TT> on =
+an=20
+    exam.</EM> </LI></OL>
+  <P></P>
+  <LI>
+  <P>To compile tester, a command line compile is all that is required, =
+because=20
+  the source code for the dependent files is included into the client=20
+  program:<BR><TT>&nbsp;&nbsp;prompt&gt; <FONT color=3D#990000>g++ -I. =
+-Wall=20
+  -Wextra -otester.x tester.cpp</FONT></TT><BR>Note, this is different =
+from the=20
+  way you should compile tracker, which requires a makefile to manage =
+separate=20
+  compilation of all the code files. </P>
+  <LI>
+  <P>Your classes will be independently tested with client programs =
+written to=20
+  the interfaces defined above.</P>
+  <LI>
+  <P>Run the distributed executables for tester and tracker in=20
+  <TT>LIB/area51/</TT> to see how your programs are expected to behave.=20
+</P></LI></UL></BODY></HTML>
+
+------=_NextPart_000_0000_01CC97D7.4FD84C80
+Content-Type: text/css;
+	charset="windows-1256"
+Content-Transfer-Encoding: quoted-printable
+Content-Location: http://www.cs.fsu.edu/~lacher/styles/RCLstyle1.css
+
+PRE {
+	FONT-FAMILY: Courier New, Fixedsys; FONT-SIZE: 10pt
+}
+TT {
+	FONT-FAMILY: Courier New, Fixedsys; FONT-SIZE: 10pt
+}
+P {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt
+}
+H1 {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 12pt; FONT-WEIGHT: bold
+}
+H2 {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+H3 {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt; FONT-WEIGHT: bold
+}
+UL {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt
+}
+LI {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt
+}
+DL {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt
+}
+DT {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt
+}
+DD {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt
+}
+EM {
+	FONT-STYLE: italic; FONT-FAMILY: Verdana, sans-serif; COLOR: #990000; =
+FONT-SIZE: 10pt
+}
+TD {
+	FONT-FAMILY: Verdana, sans-serif; FONT-SIZE: 10pt
+}
+
+------=_NextPart_000_0000_01CC97D7.4FD84C80--
